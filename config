@@ -49,7 +49,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 exec --no-startup-id nm-applet
-exec_always --no-startup-id feh --bg-scale ~/.landmark-bridge-cliff-california.jpeg
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/wallpapers/landmark-bridge-cliff-california.jpeg
 
 set $workspace1 "1: Chrome "
 set $workspace2 "2: Terminal "
@@ -123,3 +123,6 @@ exec_always gsettings set org.gnome.desktop.background show-desktop-icons false
 exec_always gsettings set org.nemo.desktop show-desktop-icons false
 
 exec_always compton -f
+
+bindsym $mod+Escape exec --no-startup-id reboot
+bindsym $mod+Shift+Escape exec "shutdown now"
