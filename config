@@ -66,8 +66,9 @@ bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
 
-assign [class="Firefox"] $workspace1
-assign [class="Intellij"] $workspace3
+assign [class="chrome"] $workspace1
+assign [class="idea"] $workspace3
+assign [class="terminal"] $workspace2
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -97,7 +98,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         position top
-        strip_workspace_numbers yes
+#        strip_workspace_numbers yes
         colors {
               separator $base03
               background $base01
@@ -126,3 +127,5 @@ exec_always compton -f
 
 bindsym $mod+Escape exec --no-startup-id reboot
 bindsym $mod+Shift+Escape exec "shutdown now"
+
+exec setxkbmap -option grp:alt_shift_toggle "us,ru" -option grp_led:caps
